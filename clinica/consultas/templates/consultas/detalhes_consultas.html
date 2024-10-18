@@ -1,0 +1,12 @@
+{% extends "consultas/base.html" %}
+
+{% block content %}
+<h2 class="title">Detalhes de Consultas</h2>
+<ul class="record-list">
+    {% for consulta in consultas %}
+    <li class="record-item">
+        <p class="record-name">{{ consulta }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

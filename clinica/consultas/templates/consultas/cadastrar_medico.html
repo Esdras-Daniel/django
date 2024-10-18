@@ -1,0 +1,12 @@
+{% extends 'consultas/base.html' %}
+
+{% block content %}
+    <h2 class="form-title">Cadastrar Médico</h2>
+    <form method="post" class="form-container">
+        {% csrf_token %}
+        <div class="form-fields">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn-submit">Cadastrar Médico</button>
+    </form>
+{% endblock %}

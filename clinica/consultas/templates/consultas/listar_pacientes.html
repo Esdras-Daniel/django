@@ -1,0 +1,13 @@
+{% extends "consultas/base.html" %}
+
+{% block content %}
+<h2 class="title">Pacientes Cadastrados</h2>
+<ul class="record-list">
+    {% for paciente in pacientes %}
+    <li class="record-item">
+        <span class="record-name">{{ paciente.nome }}</span> - 
+        <span class="record-detail">{{ paciente.email }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

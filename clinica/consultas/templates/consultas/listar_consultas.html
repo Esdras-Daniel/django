@@ -1,0 +1,54 @@
+{% extends "consultas/base.html" %}
+
+{% block content %}
+<h2 class="title">Consultas Cadastradas</h2>
+
+<!-- Formulário de filtragem -->
+<form method="GET" class="filter-form">
+    <div class="form-group">
+        <label for="medico">Médico:</label>
+        <select name="medico" id="medico">
+            <option value="">Todos</option>
+            {% for medico in medicos %}
+            <option value="{{ medico.id }}">
+                {{ medico.nome }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="paciente">Paciente:</label>
+        <select name="paciente" id="paciente">
+            <option value="">Todos</option>
+            {% for paciente in pacientes %}
+            <option value="{{ paciente.id }}">
+                {{ paciente.nome }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="data_consulta">Data da Consulta:</label>
+        <input type="date" name="data_consulta" id="data_consulta" value="{{ request.GET.data_consulta }}">
+    </div>
+
+    <div class="form-group">
+        <label for="hora_consulta">Horário:</label>
+        <input name="hora_consulta" id="hora_consulta" value="{{ request.GET.hora_consulta }}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filtrar</button>
+</form>
+
+<ul class="record-list">
+    {% for consulta in consultas %}
+    <li class="record-item">
+        <span class="record-detail"><b>Médico:</b> {{ consulta.medico.nome }}</span> - 
+        <span class="record-detail"><b>Paciente:</b> {{ consulta.paciente.nome }}</span> -
+        <span class="record-detail">{{ consulta.hora_consulta }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

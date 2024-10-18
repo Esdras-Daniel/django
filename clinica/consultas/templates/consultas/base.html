@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'cadastrar_paciente' %}" class="nav-link">Cadastrar Paciente</a> |
+        <a href="{% url 'cadastrar_medico' %}" class="nav-link">Cadastrar Médico</a> |
+        <a href="{% url 'agendar_consulta' %}" class="nav-link">Agendar Consulta</a> |
+        <a href="{% url 'listar_pacientes' %}" class="nav-link">Listar Pacientes</a> |
+        <a href="{% url 'listar_medicos' %}" class="nav-link">Listar Médicos</a> |
+        <a href="{% url 'listar_consultas' %}" class="nav-link">Listar Consultas</a> 
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

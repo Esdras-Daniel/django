@@ -1,0 +1,153 @@
+/* style.css */
+
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4CAF50;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #d5f5d0;
+    text-decoration: underline;
+}
+
+/* Título do formulário */
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centraliza os campos horizontalmente */
+    justify-content: center;  /* Centraliza os campos verticalmente */
+    gap: 20px;
+}
+
+/* Form fields */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;  /* Faz com que os campos ocupem a largura total do container */
+    max-width: 500px;  /* Define uma largura máxima */
+}
+
+.form-fields input, .form-fields select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-fields input:focus, .form-fields select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botão de submit */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Título da página */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Estilo da lista de registros */
+.record-list {
+    list-style-type: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Itens da lista de registros */
+.record-item {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.record-item:hover {
+    background-color: #e8f5e9;
+    transition: background-color 0.3s ease;
+}
+
+/* Nome do registro */
+.record-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Detalhes do registro */
+.record-detail {
+    font-size: 16px;
+    color: #666;
+}

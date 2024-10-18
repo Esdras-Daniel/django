@@ -1,0 +1,13 @@
+{% extends "consultas/base.html" %}
+
+{% block content %}
+<h2 class="title">Médicos Cadastrados</h2>
+<ul class="record-list">
+    {% for medico in medicos %}
+    <li class="record-item">
+        <a class="record-name" href="{% url 'detalhes_consultas' medico.id %}">{{ medico.nome }}</a></p> - 
+        <p class="record-detail">{{ medico.especialidade }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
